@@ -10,9 +10,19 @@ const Title = styled.h1`
 `;
 // Create a Wrapper component that'll render a <section> tag with some styles
 const Wrapper = styled.section`
-  padding: 4em;
+  padding: 40px;
   background: white;
-  background-image: url(${logo});
+  box-shadow: 0 40px 80px 0 rgba(0, 0, 0, 0.55),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+`;
+const StyledImage = styled.img`
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+`;
+const StyledPara = styled.p`
+  padding: 10px;
 `;
 //Import Logo
 //const Logo = styled.section`
@@ -24,7 +34,8 @@ class App extends React.Component {
   render() {
     return (
       <Wrapper>
-        <Title>Hello World, this is my first styled component!</Title>
+        <StyledImage src={logo} />
+        <StyledPara />
       </Wrapper>
     );
   }
